@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+#Bash script that loops from 1 to 10 and: displays bad luck for the 4th loop iteration; displays good luck for the 8th loop iteration; displays Best School for the other iterations
+MESSAGE="Best School"
+COUNT=1
+while [ $COUNT -le 10 ]; do
+    if [ $COUNT == 4 ]; then
+	echo "bad luck"
+    elif [ $COUNT == 8 ]; then
+	echo "good luck"
+    else
+	echo "$MESSAGE"
+    fi
+    COUNT=$((COUNT + 1))
+done
